@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.fosusstart.task2.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_phonebookFragment"
+            app:destination="@id/phonebookFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_backgroundFragment"
+            app:destination="@id/backgroundFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_navAFragment"
+            app:destination="@id/navAFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/backgroundFragment"
+        android:name="com.fosusstart.task2.ui.main.service.ServiceFragment"
+        android:label="BackgroundFragment"
+        tools:layout="@layout/service_fragment"/>
+    <fragment
+        android:id="@+id/phonebookFragment"
+        android:name="com.fosusstart.task2.ui.main.contentProvider.ContentProviderFragment"
+        android:label="PhonebookFragment"
+        tools:layout="@layout/content_provider_fragment"/>
+    <fragment
+        android:id="@+id/navAFragment"
+        android:name="com.fosusstart.task2.ui.main.navigation.NavAFragment"
+        android:label="nav_a_fragment"
+        tools:layout="@layout/nav_a_fragment" >
+        <action
+            android:id="@+id/action_navAFragment_to_navBFragment"
+            app:destination="@id/navBFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navBFragment"
+        android:name="com.fosusstart.task2.ui.main.navigation.NavBFragment"
+        android:label="nav_b_fragment"
+        tools:layout="@layout/nav_b_fragment" >
+        <action
+            android:id="@+id/action_navBFragment_to_navCFragment"
+            app:destination="@id/navCFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navCFragment"
+        android:name="com.fosusstart.task2.ui.main.navigation.NavCFragment"
+        android:label="nav_c_fragment"
+        tools:layout="@layout/nav_c_fragment" >
+        <action
+            android:id="@+id/action_navCFragment_to_navAFragment"
+            app:destination="@id/navAFragment"
+            app:popUpTo="@+id/navAFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
+
+    <!--test-->
+    <!--    <fragment
+            android:id="@+id/navAFragment3"
+            android:name="com.fosusstart.task2.ui.main.navigation.NavAFragment"
+            android:label="nav_a_fragment"
+            tools:layout="@layout/nav_a_fragment">
+            <action
+                android:id="@+id/action_navAFragment3_self3"
+                app:destination="@id/navAFragment3"
+                app:popUpTo="@+id/navAFragment3"
+                app:popUpToInclusive="true"/>
+        </fragment>-->

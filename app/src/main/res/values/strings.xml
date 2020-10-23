@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FsTask2</string>
+    <!--Текст кнопок в главном активити-->
+    <string name="goto_navigation">Навигация в фрагментах</string>
+    <string name="goto_background">Сервис, считающий в бэкграунде</string>
+    <string name="goto_phonebook">Получение телефонной книги</string>
+    <!--Текст кнопки перехода между фрагментами A->B->C->A-->
+    <string name="goto_next_fragment">Идём дальше</string>
+    <!--Строки для фрагмента с запуском сервиса-->
+    <string name="service_counter">Счётчик сервиса</string>
+    <string name="service_start">Запустить сервис</string>
+    <string name="service_stop">Остановить сервис</string>
+    <!--Строки для списка контактов-->
+    <string name="contacts_header">Список контактов</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/phonebook_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.contentProvider.ContentProviderFragment">
+
+    <TextView
+        android:id="@+id/contacts_header"
+        style="@style/item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/contacts_header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contacts_recycler_view"
+        android:name="com.fosusstart.task2.ContentProviderFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/contacts_header"
+        tools:context=".fragments.CurrenciesListFragment"
+        tools:listitem="@layout/contacts_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
